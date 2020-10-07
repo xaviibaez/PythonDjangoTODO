@@ -6,3 +6,8 @@ pip install django
 pip install --upgrade django
 
 django-admin startproject todopython
+
+# ON ./todopython FOLDER TO START THE SERVER
+
+python manage.py runserver
+
