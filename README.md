@@ -1,26 +1,27 @@
-# PythonDjangoTODO
- TO DO APP PYTHON DJANGO
+## PythonDjangoTODO
+TO DO APP PYTHON DJANGO
 
-# INSTALL AND UPGRADE DJANGO
-pip install django
+INSTALL AND UPGRADE DJANGO
+### `pip install django`
 
-pip install --upgrade django
+### `pip install --upgrade django`
 
-# CREATE SERVER FOLDER 
+CREATE SERVER FOLDER 
 
-django-admin startproject todopython
+### `django-admin startproject todopython`
 
-# ON ./todopython FOLDER TO START THE SERVER
+ON ./todopython FOLDER TO START THE SERVER
 
-python manage.py runserver
+### `python manage.py runserver`
 
-# MIGRATION DATA BESE -> SQL LITE
+MIGRATION DATA BESE -> SQL LITE
 
-python manage.py migrate
+### `python manage.py migrate`
 
-# CREATE USER
+CREATE USER
 
-python manage.py createsuperuser
+### `python manage.py createsuperuser`
 
-# CREATE APP 
-python manage.py startapp tasks
+CREATE APP
+
+### `python manage.py startapp tasks`
