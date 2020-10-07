@@ -11,3 +11,7 @@ django-admin startproject todopython
 
 python manage.py runserver
 
+# MIGRATION DATA BESE
+
+python manage.py migrate
+
