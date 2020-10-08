@@ -16,6 +16,7 @@ ON ./todopython FOLDER TO START THE SERVER
 
 MIGRATION DATA BESE -> SQL LITE
 
+### `python manage.py makemigrations`
 ### `python manage.py migrate`
 
 CREATE USER
