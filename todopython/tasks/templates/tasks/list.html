@@ -1,10 +1,14 @@
 <p>TO DO</p>
 
+<form>
+    {{form.title}}
+    <input type="submit" name="Create Task">
+</form>
+
 {% for task in tasks %}
     <div>
         <p>
             {{task}}
         </p>
     </div>
-
 {% endfor %}
