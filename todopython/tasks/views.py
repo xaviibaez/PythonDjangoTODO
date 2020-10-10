@@ -13,7 +13,6 @@ def index(request):
     
     form = TaskForm()
 
-
     # Despues de hacer el POST volvera a esta view
     if request.method == 'POST':
         form = TaskForm(request.POST)
@@ -34,4 +33,18 @@ def index(request):
 def updateTask(request, pk):
     task = Task.objects.get(id=pk)
 
-    return render(request, 'tasks/update_task.html')
+    form = TaskForm(instance=task)
+
+    context = {'form':form}
+
+    # Despues de hacer el POST volvera a esta view
+    if request.method == 'POST':
+        form = TaskForm(request.POST, instance=task)
+        # Si es valido, guardamos el form en la BBDD
+        if form.is_valid():
+            form.save()
+
+        # hacemos return a '/'
+        return redirect('/')
+
+    return render(request, 'tasks/update_task.html', context)

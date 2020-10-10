@@ -1,4 +1,4 @@
-<p>TO DO</p>
+<h3>To Do</h3>
 
 <!-- Boton de action que hace el submit en la BBDD-->
 <form method="POST" action="/">
@@ -11,6 +11,7 @@
 {% for task in tasks %}
     <div>
         <p>
+            <a href="{% url 'update_task' task.id %}">Update</a>
             {{task}}
         </p>
     </div>
