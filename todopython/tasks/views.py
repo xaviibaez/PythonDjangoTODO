@@ -29,3 +29,9 @@ def index(request):
 
     # Vamos a devolver el list.html
     return render(request, 'tasks/list.html', context)
+
+# Update task, pk -> primary key
+def updateTask(request, pk):
+    task = Task.objects.get(id=pk)
+
+    return render(request, 'tasks/update_task.html')
