@@ -11,6 +11,7 @@ CREATE SERVER FOLDER
 ### `django-admin startproject todopython`
 
 ON ./todopython FOLDER TO START THE SERVER
+Encenderlo cada vez
 
 ### `python manage.py runserver`
 
