@@ -17,8 +17,13 @@
             <!-- Delete -->
             <a href="{% url 'delete_task' task.id %}">Delete</a>
 
-            <!-- Si esta compeltada se tachara -->
+            <!-- Si esta completada se tachara -->
+            {% if task.complete == True %}
+            <strike>{{task}}</strike>
+            {% else %}
+            <span>{{task}}</span>
             {{task}}
+            {% endif %}
         </p>
     </div>
 {% endfor %}
