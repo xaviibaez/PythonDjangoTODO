@@ -3,7 +3,7 @@ from django.http import HttpResponse
 
 from .models import *
 from .forms import *
-# https://www.youtube.com/watch?v=4RWFvXDUmjo&t=925s&ab_channel=DennisIvy
+
 # Create your views here.
 def index(request):
     # return HttpResponse('Hola')
