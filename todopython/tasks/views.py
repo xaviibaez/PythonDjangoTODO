@@ -3,7 +3,7 @@ from django.http import HttpResponse
 
 from .models import *
 from .forms import *
-
+# https://www.youtube.com/watch?v=4RWFvXDUmjo&t=925s&ab_channel=DennisIvy
 # Create your views here.
 def index(request):
     # return HttpResponse('Hola')
@@ -48,3 +48,16 @@ def updateTask(request, pk):
         return redirect('/')
 
     return render(request, 'tasks/update_task.html', context)
+
+# Delete task, pk -> primary key
+def deleteTask(request, pk):
+    item = Task.objects.get(id=pk)
+
+    if request.method == 'POST':
+        item.delete()
+        # hacemos return a '/'
+        return redirect('/')
+
+    context = {'item':item}
+
+    return render(request, 'tasks/delete_task.html', context)
